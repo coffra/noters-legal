@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Noters - 隱私權政策與使用條款 | Privacy Policy & Terms of Service</title>
+  <meta name="description" content="Noters App 隱私權政策與使用條款 / Privacy Policy and Terms of Service for Noters App" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">
+        <div class="logo-icon">N</div>
+        <span class="logo-text">Noters</span>
+      </div>
+      <button class="lang-toggle" id="langToggle" onclick="toggleLang()">
+        <span class="lang-icon">🌐</span>
+        <span id="langLabel">English</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-glow glow-1"></div>
+    <div class="hero-glow glow-2"></div>
+    <div class="hero-content">
+      <h1 class="hero-title" id="heroTitle">隱私權政策與使用條款</h1>
+      <p class="hero-sub" id="heroSub">最後更新日期：2026-02-11</p>
+    </div>
+  </section>
+
+  <!-- ===== TABS ===== -->
+  <div class="tabs-wrapper">
+    <div class="tabs">
+      <button class="tab active" id="tab-privacy" onclick="showTab('privacy')" data-zh="隱私權政策" data-en="Privacy Policy">隱私權政策</button>
+      <button class="tab" id="tab-terms" onclick="showTab('terms')" data-zh="使用條款" data-en="Terms of Service">使用條款</button>
+      <button class="tab" id="tab-delete" onclick="showTab('delete')" data-zh="資料刪除" data-en="Data Deletion">資料刪除</button>
+    </div>
+  </div>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="main">
+
+    <!-- ============================== PRIVACY POLICY ============================== -->
+    <article class="section active" id="panel-privacy">
+
+      <!-- Chinese Version -->
+      <div class="lang-block zh">
+        <div class="doc-header">
+          <h2>隱私權政策（Noters）</h2>
+          <span class="badge">最後更新：2026-02-11</span>
+        </div>
+        <p class="intro">本隱私權政策說明 Noters（以下稱「本 App」、「我們」）在你使用本 App 時，如何蒐集、使用與分享資訊。</p>
+
+        <div class="card">
+          <h3><span class="num">1</span>我們蒐集哪些資訊</h3>
+          <h4>A. 帳號資訊</h4>
+          <p>當你使用 Google 登入時，我們使用 Firebase Authentication 進行身分驗證，並產生一個用於關聯資料的唯一識別碼（UID）。</p>
+
+          <h4>B. 雲端儲存的 App 資料（Firestore）</h4>
+          <p>我們會在 Cloud Firestore 中儲存少量資料：</p>
+          <ul>
+            <li><strong>點數（amount）</strong>：你觀看獎勵型廣告（Rewarded Ad）所獲得的點數，存放於 <code>users/{uid}</code> 文件中的 <code>amount</code> 欄位，以便跨裝置同步顯示。</li>
+          </ul>
+
+          <h4>C. 僅儲存在本機的資料（你的裝置上）</h4>
+          <p>為了讓 UI 顯示更快，本 App 會在你的裝置上儲存：</p>
+          <ul>
+            <li>剩餘使用時間的結束時間戳（endTimeMillis）</li>
+            <li>VIP 狀態快取（isVip）</li>
+          </ul>
+          <div class="note">⚠️ 注意：VIP 是否有效以 Google Play 的購買/恢復結果為準；本機快取僅用於畫面快速顯示。</div>
+
+          <h4>D. 廣告相關資料</h4>
+          <p>若你不是 VIP 使用者，本 App 會透過 Google AdMob 顯示 Banner 與獎勵型廣告。AdMob 可能會自動蒐集：</p>
+          <ul>
+            <li>廣告識別碼或類似裝置識別碼</li>
+            <li>裝置與網路資訊</li>
+            <li>廣告互動與診斷資訊</li>
+          </ul>
+          <p>用途為廣告投放、成效衡量與防詐欺。</p>
+
+          <h4>E. 付費/購買資訊</h4>
+          <p>VIP 購買由 Google Play Billing 處理。我們不會取得或儲存你的完整付款資訊。Google Play 可能會提供我們必要的購買狀態資訊，用於驗證/恢復 VIP。</p>
+        </div>
+
+        <div class="card">
+          <h3><span class="num">2</span>我們如何使用資訊</h3>
+          <p>我們會將上述資訊用於：</p>
+          <ul>
+            <li>提供登入與帳號識別（Firebase Auth）</li>
+            <li>同步點數（Firestore）</li>
+            <li>驗證與恢復 VIP（Google Play Billing）</li>
+            <li>顯示廣告並提供獎勵點數（AdMob）</li>
+            <li>維護 App 穩定性與防止濫用（例如 SDK 必要的診斷/防詐機制）</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3><span class="num">3</span>資訊分享</h3>
+          <p>我們不會販售你的個人資訊。為提供服務，本 App 可能會與以下第三方服務供應商共享必要資訊：</p>
+          <ul>
+            <li>Google Firebase（Authentication、Firestore）</li>
+            <li>Google AdMob（廣告）</li>
+            <li>Google Play Billing（內購/付費）</li>
+          </ul>
+          <p>上述第三方會依其政策與適用法律處理資料。</p>
+        </div>
+
+        <div class="card">
+          <h3><span class="num">4</span>資料保存期間</h3>
+          <ul>
+            <li>雲端資料（例如點數 amount）會保存至你提出刪除申請為止。</li>
+            <li>本機資料會留在你的裝置上，直到你清除 App 儲存空間或解除安裝。</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3><span class="num">5</span>你的權利與控制方式</h3>
+          <h4>以 Email 申請刪除資料</h4>
+          <p>你可以透過 Email 申請刪除雲端儲存的 Noters 資料：</p>
+          <a class="email-link" href="mailto:wanghaba25@gmail.com">wanghaba25@gmail.com</a>
+          <p>我們在完成必要的身分確認後，將刪除你在 Firestore 的 <code>users/{uid}</code> 文件（包含點數欄位 amount）。</p>
+          <h4>廣告</h4>
+          <ul>
+            <li>非 VIP 使用者可能會看到 Banner 與獎勵型廣告。</li>
+            <li>VIP 使用者在 App 內會停用廣告顯示。</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3><span class="num">6</span>兒童隱私</h3>
+          <p>本 App 不以 13 歲以下兒童為服務對象，我們也不會在知情的情況下蒐集 13 歲以下兒童的個人資訊。</p>
+        </div>
+
+        <div class="card">
+          <h3><span class="num">7</span>安全性</h3>
+          <p>我們會採取合理措施保護資訊安全，但網路傳輸與儲存方式無法保證 100% 安全。</p>
+        </div>
+
+        <div class="card">
+          <h3><span class="num">8</span>政策更新</h3>
+          <p>我們可能不定期更新本政策，並以「最後更新日期」標示版本。</p>
+        </div>
+
+        <div class="card">
+          <h3><span class="num">9</span>聯絡方式</h3>
+          <p>如有任何問題或需求，請聯絡：</p>
+          <a class="email-link" href="mailto:wanghaba25@gmail.com">wanghaba25@gmail.com</a>
+        </div>
+      </div>
+
+      <!-- English Version -->
+      <div class="lang-block en" style="display:none">
+        <div class="doc-header">
+          <h2>Privacy Policy (Noters)</h2>
+          <span class="badge">Last updated: 2026-02-11</span>
+        </div>
+        <p class="intro">This Privacy Policy explains how Noters (the "App", "we", "us") collects, uses, and shares information when you use the App.</p>
+
+        <div class="card">
+          <h3><span class="num">1</span>What information we collect</h3>
+          <h4>A. Account Information</h4>
+          <p>When you sign in with Google, we use Firebase Authentication to verify your identity and generate a unique identifier (UID) to link your data.</p>
+
+          <h4>B. App Data Stored in the Cloud (Firestore)</h4>
+          <p>We store a small amount of data in Cloud Firestore:</p>
+          <ul>
+            <li><strong>Points (amount)</strong>: points you earn by watching Rewarded Ads, stored in the <code>amount</code> field of <code>users/{uid}</code> to sync across devices.</li>
+          </ul>
+
+          <h4>C. Data Stored Locally (on your device)</h4>
+          <p>To make the UI display faster, the App stores:</p>
+          <ul>
+            <li>Usage time end timestamp (endTimeMillis)</li>
+            <li>VIP status cache (isVip)</li>
+          </ul>
+          <div class="note">⚠️ Note: VIP entitlement is determined by Google Play purchase/restore status; local cache is only for faster UI display.</div>
+
+          <h4>D. Advertising Data</h4>
+          <p>If you are not a VIP user, the App shows banner and rewarded ads via Google AdMob. AdMob may automatically collect:</p>
+          <ul>
+            <li>Advertising ID or similar device identifiers</li>
+            <li>Device and network information</li>
+            <li>Ad interaction and diagnostic information</li>
+          </ul>
+          <p>This is used for ad delivery, performance measurement, and fraud prevention.</p>
+
+          <h4>E. Payment / Purchase Information</h4>
+          <p>VIP purchases are processed by Google Play Billing. We do not collect or store your full payment information. Google Play may provide necessary purchase status information for verifying/restoring VIP.</p>
+        </div>
+
+        <div class="card">
+          <h3><span class="num">2</span>How we use information</h3>
+          <ul>
+            <li>Provide sign-in and account identification (Firebase Auth)</li>
+            <li>Sync points (Firestore)</li>
+            <li>Verify and restore VIP (Google Play Billing)</li>
+            <li>Show ads and grant rewarded points (AdMob)</li>
+            <li>Maintain app stability and prevent abuse (e.g., required diagnostics/anti-fraud mechanisms by SDKs)</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3><span class="num">3</span>Sharing of information</h3>
+          <p>We do not sell your personal information. To provide the service, the App may share necessary information with the following third-party service providers:</p>
+          <ul>
+            <li>Google Firebase (Authentication, Firestore)</li>
+            <li>Google AdMob (Ads)</li>
+            <li>Google Play Billing (In-app purchases / payments)</li>
+          </ul>
+          <p>These third parties process data according to their own policies and applicable laws.</p>
+        </div>
+
+        <div class="card">
+          <h3><span class="num">4</span>Data retention</h3>
+          <ul>
+            <li>Cloud data (e.g., points amount) is retained until you request deletion.</li>
+            <li>Local data remains on your device until you clear the App's storage or uninstall the App.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3><span class="num">5</span>Your rights and controls</h3>
+          <h4>Request data deletion by email</h4>
+          <p>You may request deletion of your Noters cloud-stored data by emailing:</p>
+          <a class="email-link" href="mailto:wanghaba25@gmail.com">wanghaba25@gmail.com</a>
+          <p>After necessary identity verification, we will delete your Firestore <code>users/{uid}</code> document (including the amount field).</p>
+          <h4>Ads</h4>
+          <ul>
+            <li>Non-VIP users may see banner and rewarded ads.</li>
+            <li>VIP users will have ads disabled in the App.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3><span class="num">6</span>Children's privacy</h3>
+          <p>The App is not intended for children under 13, and we do not knowingly collect personal information from children under 13.</p>
+        </div>
+
+        <div class="card">
+          <h3><span class="num">7</span>Security</h3>
+          <p>We take reasonable measures to protect information, but no method of transmission or storage can be guaranteed 100% secure.</p>
+        </div>
+
+        <div class="card">
+          <h3><span class="num">8</span>Updates to this policy</h3>
+          <p>We may update this policy from time to time and will indicate changes by updating the "Last updated" date.</p>
+        </div>
+
+        <div class="card">
+          <h3><span class="num">9</span>Contact</h3>
+          <p>If you have any questions or data deletion requests, please contact:</p>
+          <a class="email-link" href="mailto:wanghaba25@gmail.com">wanghaba25@gmail.com</a>
+        </div>
+      </div>
+
+    </article>
+
+    <!-- ============================== TERMS OF SERVICE ============================== -->
+    <article class="section" id="panel-terms">
+
+      <!-- Chinese Version -->
+      <div class="lang-block zh">
+        <div class="doc-header">
+          <h2>使用條款（Noters）</h2>
+          <span class="badge">最後更新：2026-02-11</span>
+        </div>
+        <p class="intro">本使用條款（以下稱「條款」）規範你對 Noters（以下稱「本 App」）的使用。使用本 App 即表示你同意本條款。</p>
+
+        <div class="card">
+          <h3><span class="num">1</span>服務內容</h3>
+          <p>Noters 提供：</p>
+          <ul>
+            <li>Google 登入</li>
+            <li>觀看獎勵型廣告取得點數</li>
+            <li>使用點數兌換可用時間</li>
+            <li>透過一次性購買 VIP（去廣告 + 無限時間顯示「X」）</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3><span class="num">2</span>帳號</h3>
+          <p>你可以使用 Google 登入。你需自行負責維護你的 Google 帳號安全與可用性。</p>
+        </div>
+
+        <div class="card">
+          <h3><span class="num">3</span>點數與兌換規則</h3>
+          <ul>
+            <li>你可以透過觀看獎勵型廣告獲得點數。</li>
+            <li>兌換比例：<strong>1 點數 = 24 小時</strong>。</li>
+            <li>兌換後點數會扣除，可用時間會增加至剩餘使用時間中。</li>
+            <li>兌換屬於即時生效且不可逆，一旦兌換完成，恕不提供撤銷或回復。</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3><span class="num">4</span>VIP 一次性購買</h3>
+          <ul>
+            <li>VIP 為 Google Play 內的一次性購買。</li>
+            <li>VIP 會停用廣告顯示，並顯示無限時間（「X」）。</li>
+            <li>VIP 權益以 Google Play 的購買/恢復結果為準，可透過恢復購買機制恢復權益。</li>
+          </ul>
+          <div class="note">⚠️ 注意：所謂「一次性購買/永久/終身」係指本產品（Noters）的預期服務生命週期內。若因技術不可抗力或商業考量終止營運，開發者保留停止服務且不予退費之權利。</div>
+        </div>
+
+        <div class="card">
+          <h3><span class="num">5</span>付款與退款</h3>
+          <p>付款由 Google Play 處理。退款與否及流程依 Google Play 的政策為準。</p>
+          <p>由於本 App 提供之 VIP 或點數兌換屬數位內容服務，一旦啟用即不適用七天鑑賞期。</p>
+        </div>
+
+        <div class="card">
+          <h3><span class="num">6</span>廣告</h3>
+          <p>非 VIP 使用者可能會看到 Banner 與獎勵型廣告。廣告的提供方式與頻率可能會調整。</p>
+        </div>
+
+        <div class="card">
+          <h3><span class="num">7</span>使用限制</h3>
+          <p>你同意不從事以下行為：</p>
+          <ul>
+            <li>濫用或利用漏洞影響 App 或服務正常運作</li>
+            <li>嘗試繞過購買驗證或廣告系統</li>
+            <li>逆向工程、干擾或破壞 App 的運作</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3><span class="num">8</span>免責聲明與著作權</h3>
+          <ul>
+            <li>本 App 僅作為繪圖與螢幕截取工具使用，使用者應確保其使用本 App 截取或標註之內容（包含但不限於第三方 App 畫面、影片或圖像）未侵犯他人之智慧財產權。</li>
+            <li>任何因使用者行為導致之侵權糾紛或損失，概由使用者自行承擔法律責任，開發者不負賠償或法律連帶責任。</li>
+            <li>本 App 以「現狀」提供，不保證不中斷或無錯誤運行。</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3><span class="num">9</span>責任限制</h3>
+          <p>在法律允許的最大範圍內，對於使用本 App 所造成的任何間接、附帶或衍生損害，我們不負賠償責任。</p>
+        </div>
+
+        <div class="card">
+          <h3><span class="num">10</span>終止</h3>
+          <p>若你違反條款或有不當使用行為，我們得暫停或終止你對本 App 的使用權限。</p>
+        </div>
+
+        <div class="card">
+          <h3><span class="num">11</span>條款更新</h3>
+          <p>我們可能不定期更新條款。你繼續使用本 App 即視為同意更新後的條款。</p>
+        </div>
+
+        <div class="card">
+          <h3><span class="num">12</span>聯絡方式</h3>
+          <a class="email-link" href="mailto:wanghaba25@gmail.com">wanghaba25@gmail.com</a>
+        </div>
+      </div>
+
+      <!-- English Version -->
+      <div class="lang-block en" style="display:none">
+        <div class="doc-header">
+          <h2>Terms of Service (Noters)</h2>
+          <span class="badge">Last updated: 2026-02-11</span>
+        </div>
+        <p class="intro">These Terms of Service ("Terms") govern your use of Noters (the "App"). By using the App, you agree to these Terms.</p>
+
+        <div class="card">
+          <h3><span class="num">1</span>The Service</h3>
+          <p>Noters provides:</p>
+          <ul>
+            <li>Google sign-in</li>
+            <li>Earning points by watching rewarded ads</li>
+            <li>Redeeming points for usage time</li>
+            <li>An optional one-time VIP purchase (ad-free + unlimited time display "X")</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3><span class="num">2</span>Accounts</h3>
+          <p>You may sign in with Google. You are responsible for maintaining the security and availability of your Google account.</p>
+        </div>
+
+        <div class="card">
+          <h3><span class="num">3</span>Points and redemption</h3>
+          <ul>
+            <li>You may earn points by watching rewarded ads.</li>
+            <li>Conversion rate: <strong>1 point = 24 hours</strong>.</li>
+            <li>When you redeem points, points will be deducted and the corresponding time will be added to your remaining usage time.</li>
+            <li>Redemptions take effect immediately and are final. Once redeemed, they cannot be reversed or restored.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3><span class="num">4</span>VIP one-time purchase</h3>
+          <ul>
+            <li>VIP is a one-time in-app purchase via Google Play.</li>
+            <li>VIP disables ads in the App and enables unlimited time display ("X").</li>
+            <li>VIP entitlement is determined by Google Play purchase/restore status and can be restored via the Google Play restore mechanism.</li>
+          </ul>
+          <div class="note">⚠️ Note: "One-time purchase/Lifetime" refers to the expected service lifecycle of the product (Noters). The developer reserves the right to terminate services without refund for technical or commercial reasons.</div>
+        </div>
+
+        <div class="card">
+          <h3><span class="num">5</span>Payments and refunds</h3>
+          <p>Payments are processed by Google Play. Refund eligibility and processes are subject to Google Play's policies.</p>
+          <p>Digital content/VIP services are not eligible for a 7-day trial once activated.</p>
+        </div>
+
+        <div class="card">
+          <h3><span class="num">6</span>Advertising</h3>
+          <p>Non-VIP users may see banner ads and rewarded ads. Ad availability and frequency may change.</p>
+        </div>
+
+        <div class="card">
+          <h3><span class="num">7</span>Acceptable use</h3>
+          <p>You agree not to:</p>
+          <ul>
+            <li>Abuse the App or exploit vulnerabilities that affect normal operation</li>
+            <li>Attempt to bypass purchase verification or ad systems</li>
+            <li>Reverse engineer, interfere with, or disrupt the App</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3><span class="num">8</span>Disclaimer &amp; Copyright</h3>
+          <ul>
+            <li>Noters is intended for drawing and screen capturing only. Users must ensure that the content captured or annotated (including 3rd-party apps, videos, or images) does not infringe on anyone's intellectual property rights.</li>
+            <li>Any legal disputes or losses caused by user actions are the sole responsibility of the user. The developer assumes no legal liability.</li>
+            <li>The App is provided "as is" without warranties of uninterrupted or error-free operation.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3><span class="num">9</span>Limitation of liability</h3>
+          <p>To the maximum extent permitted by law, we are not liable for any indirect, incidental, or consequential damages arising from your use of the App.</p>
+        </div>
+
+        <div class="card">
+          <h3><span class="num">10</span>Termination</h3>
+          <p>We may suspend or terminate access if you violate these Terms or misuse the App.</p>
+        </div>
+
+        <div class="card">
+          <h3><span class="num">11</span>Changes to Terms</h3>
+          <p>We may update these Terms from time to time. Continued use of the App means you accept the updated Terms.</p>
+        </div>
+
+        <div class="card">
+          <h3><span class="num">12</span>Contact</h3>
+          <a class="email-link" href="mailto:wanghaba25@gmail.com">wanghaba25@gmail.com</a>
+        </div>
+      </div>
+
+    </article>
+
+    <!-- ============================== DATA DELETION ============================== -->
+    <article class="section" id="panel-delete">
+
+      <!-- Chinese Version -->
+      <div class="lang-block zh">
+        <div class="doc-header">
+          <h2>資料刪除申請</h2>
+          <span class="badge">Data Deletion Request</span>
+        </div>
+        <p class="intro">你可以申請刪除本 App 在雲端所儲存的所有個人資料。</p>
+
+        <div class="card delete-card">
+          <h3>📧 如何申請刪除資料</h3>
+          <ol>
+            <li>請寄信至：<a class="email-link" href="mailto:wanghaba25@gmail.com">wanghaba25@gmail.com</a></li>
+            <li>信件主旨建議：<strong>「Noters 資料刪除申請」</strong></li>
+            <li>請在信件中提供：
+              <ul>
+                <li>你用來登入的 Google 帳號 Email（或顯示名稱）</li>
+                <li>明確說明你希望刪除哪些 Noters 資料</li>
+              </ul>
+            </li>
+          </ol>
+          <div class="note">✅ 我們在完成必要的身分確認後，將刪除你在 Firestore 的 <code>users/{uid}</code> 資料（包含點數 amount）。</div>
+        </div>
+
+        <div class="card">
+          <h3>📋 哪些資料會被刪除？</h3>
+          <ul>
+            <li>雲端 Firestore 中的 <code>users/{uid}</code> 文件（包含點數 amount）</li>
+          </ul>
+          <h3 style="margin-top:1rem">📋 哪些資料不在此範圍內？</h3>
+          <ul>
+            <li>本機資料（儲存於你手機上的快取）需由你自行至設定 > 應用程式 > Noters 清除資料。</li>
+            <li>Google 帳號資料由 Google 管理，請至 Google 帳號設定處理。</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- English Version -->
+      <div class="lang-block en" style="display:none">
+        <div class="doc-header">
+          <h2>Data Deletion Request</h2>
+          <span class="badge">資料刪除申請</span>
+        </div>
+        <p class="intro">You may request deletion of all personal data the App stores in the cloud.</p>
+
+        <div class="card delete-card">
+          <h3>📧 How to request data deletion</h3>
+          <ol>
+            <li>Email us at: <a class="email-link" href="mailto:wanghaba25@gmail.com">wanghaba25@gmail.com</a></li>
+            <li>Suggested subject: <strong>"Noters Data Deletion Request"</strong></li>
+            <li>Include in your email:
+              <ul>
+                <li>The Google account email (or display name) you used to sign in</li>
+                <li>A clear request to delete your Noters data</li>
+              </ul>
+            </li>
+          </ol>
+          <div class="note">✅ After necessary identity verification, we will delete your Firestore <code>users/{uid}</code> data (including the amount field).</div>
+        </div>
+
+        <div class="card">
+          <h3>📋 What data will be deleted?</h3>
+          <ul>
+            <li>Cloud Firestore <code>users/{uid}</code> document (including points amount)</li>
+          </ul>
+          <h3 style="margin-top:1rem">📋 What is NOT covered?</h3>
+          <ul>
+            <li>Local device data must be cleared manually via Settings > Apps > Noters > Clear Data.</li>
+            <li>Google account data is managed by Google directly.</li>
+          </ul>
+        </div>
+      </div>
+
+    </article>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <div class="logo-icon small">N</div>
+        <span>Noters</span>
+      </div>
+      <p class="footer-copy">© 2026 Noters · <a href="mailto:wanghaba25@gmail.com">wanghaba25@gmail.com</a></p>
+      <p class="footer-note zh">所有條款以本頁面最新版本為準</p>
+      <p class="footer-note en" style="display:none">These documents are governed by the latest version on this page</p>
+    </div>
+  </footer>
+
+  <script>
+    let currentLang = 'zh';
+    let currentTab  = 'privacy';
+
+    const i18n = {
+      zh: {
+        heroTitle: '隱私權政策與使用條款',
+        heroSub:   '最後更新日期：2026-02-11',
+        langLabel: 'English',
+      },
+      en: {
+        heroTitle: 'Privacy Policy & Terms of Service',
+        heroSub:   'Last updated: 2026-02-11',
+        langLabel: '中文',
+      }
+    };
+
+    function toggleLang() {
+      currentLang = currentLang === 'zh' ? 'en' : 'zh';
+      applyLang();
+    }
+
+    function applyLang() {
+      const t = i18n[currentLang];
+      document.getElementById('heroTitle').textContent = t.heroTitle;
+      document.getElementById('heroSub').textContent   = t.heroSub;
+      document.getElementById('langLabel').textContent  = t.langLabel;
+      document.documentElement.lang = currentLang === 'zh' ? 'zh-TW' : 'en';
+
+      // Show/hide language blocks
+      document.querySelectorAll('.lang-block.zh').forEach(el => {
+        el.style.display = currentLang === 'zh' ? '' : 'none';
+      });
+      document.querySelectorAll('.lang-block.en').forEach(el => {
+        el.style.display = currentLang === 'en' ? '' : 'none';
+      });
+
+      // Update tab labels
+      document.querySelectorAll('.tab').forEach(tab => {
+        tab.textContent = tab.dataset[currentLang];
+      });
+
+      // Footer note
+      document.querySelectorAll('.footer-note.zh').forEach(el => el.style.display = currentLang === 'zh' ? '' : 'none');
+      document.querySelectorAll('.footer-note.en').forEach(el => el.style.display = currentLang === 'en' ? '' : 'none');
+    }
+
+    function showTab(tab) {
+      currentTab = tab;
+      document.querySelectorAll('.section').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.tab').forEach(el => el.classList.remove('active'));
+      document.getElementById('panel-' + tab).classList.add('active');
+      document.getElementById('tab-' + tab).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
